@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
-import {toast} from 'react-hot-toast';
+
 
 const Contact = () => {
 
@@ -12,7 +12,7 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-          const data = await axios.post("http://localhost:5000/api/v1/user/contact", {
+          const data = await axios.post("https://portfolio-backend-d7b1.onrender.com/api/v1/user/contact", {
             Name,email,subject,message
           },
           {
